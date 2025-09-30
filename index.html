@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="file-section">
+            <h1>座位安排</h1>
+    
+            <!-- 匯入名單區域 -->
+            <input type="file" id="file-input" accept=".csv" onchange="loadNames(event)">
+            <p>匯入名單 (.csv 格式，包含姓名和學號)</p>
+            <button onclick="randomizeSeats()">隨機安排座位</button>
+        </div>
+
+        <!-- 座位區域 -->
+        <div class="main-content">
+            <h2>國立中央大學111學年度第二學期教室座位表</h2>
+            <div class="information">
+                <div class="info-cell">
+                    <span>課號</span>
+                    <span></span>
+                </div>
+                <div class="info-cell">
+                    <span>開課單位</span>
+                    <span>土木系</span>
+                </div>
+                <div class="info-cell">
+                    <span>授課教師</span>
+                    <span>蘇昱臻</span>
+                </div>
+
+                <div class="info-cell">
+                    <span>課名</span>
+                    <span>鋼筋混凝土設計</span>
+                </div>
+                <div class="info-cell">
+                    <span>教室編號</span>
+                    <span>E245</span>
+                </div>
+                <div class="info-cell">
+                    <span>日期</span>
+                    <span>114.10.01</span>
+                </div>
+            </div>
+            <span class="stage">講台</span>
+            <div class="seat-chart" id="seat-chart"></div>
+        </div>
+
+        <!-- 顯示名單 -->
+        <div class="name-list">
+            <h2>名單</h2>
+            <ul id="name-list"></ul>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
